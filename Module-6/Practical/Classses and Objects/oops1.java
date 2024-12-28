@@ -1,5 +1,5 @@
-package com.simple4;
-
+package com.OOPS;
+// Create a class Student with attributes (name, age) and a method to display the details.
 import java.util.Scanner;
 
 class Student
@@ -7,30 +7,12 @@ class Student
 	String name;
 	int age;
 	String city;
-	
-	public String getName() 
+
+	public void displayDetails()
 	{
-		return name;
-	}
-	public void setName(String name) 
-	{
-		this.name = name;
-	}
-	public int getAge() 
-	{
-		return age;
-	}
-	public void setAge(int age) 
-	{
-		this.age = age;
-	}
-	public String getCity() 
-	{
-		return city;
-	}
-	public void setCity(String city) 
-	{
-		this.city = city;
+		System.out.println("Name is: "+name);	
+		System.out.println("Age is: "+age);	
+		System.out.println("City is: "+city);	
 	}
 }
 
@@ -38,28 +20,27 @@ public class oops1
 {
 	public static void main(String[] args) 
 	{
-		Student sc = new Student();
+		Student obj = new Student();
 		
-		Scanner obj = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Enter The name : ");
-		String name = obj.nextLine();
-		
-	
-		obj.nextLine();
+		String name = sc.nextLine();
 		
 		System.out.print("Enter The city : ");
-		String city = obj.nextLine();
+		String city = sc.nextLine();
 		
 		System.out.print("Enter The age : ");
-		int age = obj.nextInt();
+		int age = sc.nextInt();
 		
-		sc.setName(name);
-		sc.setAge(age);
-		sc.setCity(city);
 		
-		System.out.println("Student Name is : "+sc.getName());
-		System.out.println("Student Age is : "+sc.getAge());
-		System.out.println("Student City is : "+sc.getCity());
+		
+		obj.name = name;
+		obj.age = age;
+		obj.city = city;
+		
+		System.out.println();
+		
+		obj.displayDetails();
 	}
 }
